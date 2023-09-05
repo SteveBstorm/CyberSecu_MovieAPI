@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSecu_MovieAPI", "CyberSecu_MovieAPI\CyberSecu_MovieAPI.csproj", "{DF9A8D4F-24AE-4991-BD7D-35F33596B322}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MovieDB", "MovieDB\MovieDB.sqlproj", "{97C2B455-D45A-450A-A31F-0847077172AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieAPI_DAL", "MovieAPI_DAL\MovieAPI_DAL.csproj", "{FE8610AD-232B-4545-B0A7-F9F32ED9B968}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF9A8D4F-24AE-4991-BD7D-35F33596B322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9A8D4F-24AE-4991-BD7D-35F33596B322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9A8D4F-24AE-4991-BD7D-35F33596B322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9A8D4F-24AE-4991-BD7D-35F33596B322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C2B455-D45A-450A-A31F-0847077172AA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FE8610AD-232B-4545-B0A7-F9F32ED9B968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8610AD-232B-4545-B0A7-F9F32ED9B968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8610AD-232B-4545-B0A7-F9F32ED9B968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8610AD-232B-4545-B0A7-F9F32ED9B968}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {751EEB97-802B-4100-ADCC-CBC46AD6C08C}
+	EndGlobalSection
+EndGlobal

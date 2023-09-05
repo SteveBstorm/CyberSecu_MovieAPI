@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Person]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	Lastname VARCHAR(50) NOT NULL,
+	Firstname VARChar(50) NOT NULL,
+	ImageUrl VARCHAR(400)
+)
