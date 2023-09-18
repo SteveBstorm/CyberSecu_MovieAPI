@@ -16,8 +16,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+//var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+//var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+//var connectionString = $"Data Source={dbHost};Initial Catalog={dbName}; User ID=sa; Password={dbPassword}";
+
 builder.Services.AddTransient<IDbConnection, SqlConnection>(sp => 
-    new SqlConnection(builder.Configuration.GetConnectionString("default")));
+    new SqlConnection(
+        builder.Configuration.GetConnectionString("default")
+        ));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IGenreService, GenreService>();

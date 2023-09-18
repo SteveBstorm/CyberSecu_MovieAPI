@@ -20,6 +20,7 @@ namespace MovieAPI_DAL.Services
 
         public IEnumerable<Movie> GetAll()
         {
+            
             return _connection.Query<Movie>("SELECT * FROM Movie");
         }
 
