@@ -5,6 +5,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieAPI_DAL.Models;
 using MovieAPI_DAL.Repos;
+using Swashbuckle.AspNetCore.Annotations;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Security.Claims;
+using System.Text;
 
 namespace CyberSecu_MovieAPI.Controllers
 {
@@ -19,7 +24,7 @@ namespace CyberSecu_MovieAPI.Controllers
             _userService = userService;
             _tokenGenerator = tokenGenerator;
         }
-
+       //[SwaggerResponse(int.Parse(HttpStatusCode.NotFound), Type = typeof(NotFoundResult))]
         [Authorize("ModoPolicy")]
         [HttpGet]
         public IActionResult GetAll()
@@ -54,6 +59,17 @@ namespace CyberSecu_MovieAPI.Controllers
         {
             _userService.RegisterUser(user.Nickname, user.Email, user.Password);
             return Ok();
+        }
+
+        [HttpGet("getProfile")]
+        public IActionResult GetProfile()
+        {
+            //var t = User.Claims.First(c => c.Type == ClaimTypes.Sid);
+            string token = Request.Headers.Authorization.ToString().Substring(8);
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            JwtSecurityToken jwt = handler.ReadJwtToken(token);
+            
+            return Ok(jwt.Claims);
         }
     }
 }
