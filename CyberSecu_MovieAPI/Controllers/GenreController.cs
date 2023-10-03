@@ -21,7 +21,7 @@ namespace CyberSecu_MovieAPI.Controllers
         {
             return Ok(_genreService.GetAll());
         }
-        [Authorize("Admin")]
+        //[Authorize("Admin")]
 
         [HttpPost]
         public IActionResult Create(string genre)

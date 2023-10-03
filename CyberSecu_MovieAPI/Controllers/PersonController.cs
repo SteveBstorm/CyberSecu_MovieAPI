@@ -24,7 +24,7 @@ namespace CyberSecu_MovieAPI.Controllers
             return Ok(_personService.GetAll());
         }
 
-        [Authorize("AdminPolicy")]
+       // [Authorize("AdminPolicy")]
         [HttpPost]
         public IActionResult Post(newPerson person)
         {
@@ -50,7 +50,7 @@ namespace CyberSecu_MovieAPI.Controllers
             return Ok(_personService.GetById(id));
         }
 
-        [Authorize("AdminPolicy")]
+        //[Authorize("AdminPolicy")]
         [HttpPost("setActor")]
         public IActionResult SetActor(PersonRole actor)
         {

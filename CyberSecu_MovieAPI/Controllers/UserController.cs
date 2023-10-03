@@ -25,14 +25,14 @@ namespace CyberSecu_MovieAPI.Controllers
             _tokenGenerator = tokenGenerator;
         }
        //[SwaggerResponse(int.Parse(HttpStatusCode.NotFound), Type = typeof(NotFoundResult))]
-        [Authorize("ModoPolicy")]
+        //[Authorize("ModoPolicy")]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_userService.GetUsers());
         }
 
-        [Authorize("AdminPolicy")]
+        //[Authorize("AdminPolicy")]
         [HttpPatch("setRole")]
         public IActionResult ChangeRole(ChangeRole r)
         {

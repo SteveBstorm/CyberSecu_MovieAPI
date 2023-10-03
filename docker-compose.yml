@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  cybersecu_movieapi:
-    image: ${DOCKER_REGISTRY-}cybersecumovieapi
-    build:
-      context: .
-      dockerfile: CyberSecu_MovieAPI/Dockerfile

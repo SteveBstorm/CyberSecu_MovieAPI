@@ -29,7 +29,7 @@ namespace CyberSecu_MovieAPI.Controllers
             return Ok(_movieService.GetById(id));
         }
 
-        [Authorize("Admin")]
+        //[Authorize("Admin")]
         [HttpPost]
         public IActionResult Create(Movie movie)
         {

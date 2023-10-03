@@ -56,6 +56,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         });
 
 
+builder.Services.AddCors(o => o.AddPolicy("myPolicy", options =>
+        options.WithOrigins("http://localhost:4200", "http://monsite.com")
+               .AllowAnyMethod()
+               .AllowCredentials()
+               .AllowAnyHeader()
+    ));
 
 
 var app = builder.Build();
@@ -66,13 +72,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors(o => o.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+//app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+//Wildcard => Porte ouverte, on autorise tout
+app.UseCors("myPolicy");
 
 app.MapControllers();
 
